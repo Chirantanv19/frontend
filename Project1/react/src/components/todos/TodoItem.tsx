@@ -5,10 +5,12 @@ interface Todo{
     completed: boolean;
 }
 
-export default function TodoItem({todo}:{todo: Todo}){
+export default function TodoItem({todo}:{todo:Todo}){
     return(
         <div>
-          {todo.title}
+            {todo.id}
+            {todo.title}
+            {todo.completed}
         </div>
     )
 }

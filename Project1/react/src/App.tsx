@@ -1,12 +1,21 @@
-import './App.css'
-import TodoItem from './components/todos/TodoItem'
+import "./App.css";
+import { Todo } from "../../types/todo";
+import TodoList from "./components/todos/TodoList";
 
 function App() {
-   const dummyTodo = {id: "1", title: "Buy groceries", completed:false}
+
+const dummyTodos: Todo[] = [
+  { id: "1", title: "Buy groceries", completed: false },
+  { id: "2", title: "Walk the dog", completed: true },
+  { id: "3", title: "Finish React tutorial", completed: false },
+  { id: "4", title: "Read a book chapter", completed: false }
+];
 
   return (
-       <TodoItem todo={dummyTodo}/>
-  )
+    <>
+      <TodoList todos={dummyTodos} />
+    </>
+  );
 }
 
-export default App
+export default App;
